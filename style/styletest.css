@@ -1,0 +1,27 @@
+.row-carousel{
+    
+    margin-right: 0px;
+    height: auto;
+    margin-top: 0px;    
+}
+.row{
+    
+    margin-top: 40px;   
+    margin-right: 0px;
+    
+}
+.categories{
+    border: 10px solid red;
+    height: auto;
+    float: left;
+    margin-top: auto;
+    
+}
+
+.categories h1{
+    width: auto;
+}
+
+.product{
+    margin: auto;
+}

@@ -1,0 +1,24 @@
+.centrado{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.altura-mensaje{
+    min-height: 100px;
+}
+
+.ancho-footer{
+    margin: auto;
+}
+
+.margenes-container{
+    margin-bottom: 5%;
+}
+
+.distancia-footer{
+    margin-right: 100px;
+    padding-left: 100px;
+    
+}
+
+
