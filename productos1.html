@@ -1,257 +1,374 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./bootstrap/bootstrap-4.6.0-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./style/style.css">
+  <head>
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="./style/style_home.css" />
+      <link rel="stylesheet" href="./style/style_header.css" />
+      <link rel="stylesheet" href="./style/stylefooter.css" />
+      <link
+        rel="stylesheet"
+        href="./bootstrap/bootstrap-4.6.0-examples/sticky-footer-navbar/sticky-footer-navbar.css"
+      />
+      <link
+        rel="stylesheet"
+        href="./bootstrap/bootstrap-4.6.0-dist/css/bootstrap.min.css"
+      />
+      <link
+        rel="canonical"
+        href="https://getbootstrap.com/docs/4.6/examples/carousel/"
+      />
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+        crossorigin="anonymous"
+      />
+      <title>Mercado Artesano</title>
+      <link
+        rel="stylesheet"
+        href="./bootstrap/bootstrap-4.6.0-examples/assets/dist/css/bootstrap.min.css"
+      />
+      <link
+        rel="stylesheet"
+        href="./bootstrap/bootstrap-4.6.0-examples/checkout/form-validation.css"
+      />
+      <!-- JQUERY INVOKE -->
+      <script
+        src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"
+      ></script>
+      <!-- GUARDAR INFO DEL ELEMENTO CLICKEADO -->
+      <script src="./js/product_information.js"></script>
+      <!-- LLAMAR A API FAKE_STORE -->
+      <script src="./js/api_productos.js"></script>
+      <!-- LLAMAR API TO TRANSFORM DOLLAR TO CLP  -->
+      <script src="./js/clp_dollar.js"></script>
+    </head>
+  </head>
+  <body class="mainClass">
+    <header>
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top nav-color">
+        <a class="navbar-brand" href="./home.html"
+          ><img
+            src="./icons/tienda-en-linea.png"
+            alt="Mercado artesanos"
+            height="50px"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="./home.html"
+                >Inicio <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./productos1.html">Productos</a>
+            </li>
 
-    <link rel="stylesheet" href="./style/style4.css">
-    <link rel="stylesheet" href="./style/styletest.css">
-
-    
-    <title>Mercado Artesano</title>
-</head>
-<body class="mainClass">
-
-  <header>
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top nav-color">
-      <a class="navbar-brand" href="./home.html"><img src="./icons/tienda-en-linea.png" alt="Mercado artesanos" height="50px"></a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarCollapse"
-        aria-controls="navbarCollapse"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="./home.html"
-              >Inicio <span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./productos1.html">Productos</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="./contacto_artesanos.html">Contacto</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./aboutUs.html">Acerca de nosotros</a>
-          </li>
-        </ul>
-        <form class="form-inline mt-2 mt-md-0">
-          <input
-            class="form-control mr-sm-2"
-            type="text"
-            placeholder="Buscar"
-            aria-label="Buscar"
-          />
-          <a href="#">
-            <input type="button" class="button1" value="Iniciar sesión">
-          </a>
-          <a href="./registro_artesanos.html">
-            <input type="button" class="button1" value="Registrarse">
-          </a>
-        </form>
-      </div>
-    </nav>
-  </header>
-
-
-<div class="col-12 mastergrid">
-    <div class="col-sm-12 col-lg-2 col-xl-3 col-md-2 categoria2"> <!-- acá van las categorías-->
-        <div class="div-categories"><a href="">Muebles</a></div>
-        <div class="div-categories"><a href="">joyas</a></div>
-        <div class="div-categories"><a href="">Bolsos</a></div>
-        <div class="div-categories"><a href="">Talabartería</a></div>
-       
-
-
-    </div>
-    <div class="container-fluid dimension col-sm-12 col-8 ">
-        
-        <div class="row dimension">
-            <div class="col-sm-12 ">
-                <h2 class="page-header">Productos destacados</h2>
-            </div>
-              <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3  min_product ">
-                    <a href="./producto-principal.html">
-                        <img
-                        class="img-product"
-                        src="./image/nostock.jpg"
-                        alt="Una descripción bonita"
-                        />
-                    </a>
-                <div class="name-product">
-                    <h3>
-                    <a href="./producto-principal.html"> nombre del producto </a>
-                    </h3>
-                    <div class="precio-producto">$90.000</div>
-                </div>
-  
-            </div>
-            
-          <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 min_product "> <!-- producto--> 
-                <a href="./producto-principal.html">
-                    <img
-                    class="img-product"
-                    src="./image/nostock.jpg"
-                    alt="Una descripción bonita"
-                    />
-                </a>
-                <div class="name-product">
-                    <h3>
-                        <a href="./producto-principal.html"> nombre del producto </a>
-                    </h3>
-                    <div class="precio-producto">$90.000</div>
-                </div>
-            </div>    
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 min_product "> <!-- producto-->
-                <a href="./producto-principal.html">
-                    <img
-                    class="img-product"
-                    src="./image/nostock.jpg"
-                    alt="Una descripción bonita"
-                    />
-                </a>
-                <div class="name-product">
-                    <h3>
-                    <a href="./producto-principal.html"> nombre del producto </a>
-                    </h3>
-                    <div class="precio-producto">$90.000</div>
-                </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 min_product "> <!-- producto--> 
-                <a href="./producto-principal.html">
-                    <img
-                    class="img-product"
-                    src="./image/nostock.jpg"
-                    alt="Una descripción bonita"
-                    />
-                </a>
-                <div class="name-product">
-                    <h3>
-                    <a href="./producto-principal.html"> nombre del producto </a>
-                    </h3>
-                    <div class="precio-producto">$90.000</div>
-                </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 min_product "> <!-- producto--> 
-                <a href="./producto-principal.html">
-                    <img
-                    class="img-product"
-                    src="./image/nostock.jpg"
-                    alt="Una descripción bonita"
-                    />
-                </a>
-                <div class="name-product">
-                    <h3>
-                    <a href="./producto-principal.html"> nombre del producto </a>
-                    </h3>
-                    <div class="precio-producto">$90.000</div>
-                </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 min_product "> <!-- producto--> 
-                <a href="./producto-principal.html">
-                    <img
-                    class="img-product"
-                    src="./image/nostock.jpg"
-                    alt="Una descripción bonita"
-                    />
-                </a>
-                <div class="name-product">
-                    <h3>
-                    <a href="./producto-principal.html"> nombre del producto </a>
-                    </h3>
-                    <div class="precio-producto">$90.000</div>
-                </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 min_product "> <!-- producto--> 
-                <a href="./producto-principal.html">
-                    <img
-                    class="img-product"
-                    src="./image/nostock.jpg"
-                    alt="Una descripción bonita"
-                    />
-                </a>
-                <div class="name-product">
-                    <h3>
-                    <a href="./producto-principal.html"> nombre del producto </a>
-                    </h3>
-                    <div class="precio-producto">$90.000</div>
-                </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 min_product "> <!-- producto--> 
-                <a href="./producto-principal.html">
-                    <img
-                    class="img-product"
-                    src="./image/nostock.jpg"
-                    alt="Una descripción bonita"
-                    />
-                </a>
-                <div class="name-product">
-                    <h3>
-                    <a href="./producto-principal.html"> nombre del producto </a>
-                    </h3>
-                    <div class="precio-producto">$90.000</div>
-                </div>
-                </div>
-                
-                
-            </div>
-        </div>
-  </div>   
-
-  <footer class="bg-dark text-white mt-auto">
-    <div class="container-fluid">
-        <nav class="row col-12">
-            <a href="#" class="col-xl-2 col-lg-2 col-md-4 col-sm-6 text-reset text-uppercase d-flex align-items-center justify-content-between distancia-footer">
-                <img src="./icons/tienda-en-linea.png" height="100px" alt="Logo Mercado Artesano" class="mr-3">
-                Mercado Artesanos
+            <li class="nav-item">
+              <a class="nav-link" href="./contacto_artesanos.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./aboutUs.html">Acerca de nosotros</a>
+            </li>
+          </ul>
+          <form class="form-inline mt-2 mt-md-0">
+            <input
+              class="form-control mr-sm-2"
+              type="text"
+              placeholder="Buscar"
+              aria-label="Buscar"
+            />
+            <a href="#">
+              <input type="button" class="button1" value="Iniciar sesión" />
             </a>
-            <ul class="col-xl-2 col-lg-2 col-md-4 col-sm-6 list-unstyled">
-              <li class="font-weight-bold text-uppercase">recomendados</li>
-              <li><a href="" class="text-reset">link1</a></li>
-              <li><a href="" class="text-reset">link2</a></li>
-              <li><a href="" class="text-reset">link3</a></li>
-              <li><a href="" class="text-reset">link4</a></li>
-            </ul>
-            <ul class="col-xl-2 col-lg-2 col-md-4 col-sm-6 list-unstyled">
-              <li class="font-weight-bold text-uppercase">Enlaces rapidos</li>
-              <li><a href="./home.html" class="text-reset">Inicio</a></li>
-              <li><a href="./productos1.html" class="text-reset">Productos</a></li>
-              <li><a href="./contacto_artesanos.html" class="text-reset">Contacto</a></li>
-              <li><a href="./aboutUs.html" class="text-reset">Acerca de nosotros</a></li>
-            </ul>
-            <ul class="col-xl-1 col-lg-1 col-md-4 col-sm-6 list-unstyled">
-              <li class="font-weight-bold text-uppercase">Redes Sociales</li>
-              <li class="d-flex justify-content-between">
-                <a href="https://www.facebook.com/scarlett.johnanson">
-                  <img src="./icons/facebook.png" alt="Facebook" height="20px">
-                </a>
-                <a href="https://www.instagram.com/alexandradaddario/?hl=es-la">
-                  <img src="./icons/instagram.png" alt="instagram" height="20px">
-                </a>
-                <a href="https://twitter.com/muebleslufran">
-                  <img src="./icons/gorjeo.png" alt="Twitter" height="20px">
-                </a>
-                <a href="https://web.whatsapp.com">
-                  <img src="./icons/whatsapp.png" alt="whatsapp" height="20px">
-                </a>
-              </li>
-            </ul>
-        </nav>
-    </div>
-</footer>
-</body>
+            <a href="./registro_artesanos.html">
+              <input type="button" class="button1" value="Registrarse" />
+            </a>
+            <select id="slc_money" name="cambio_de_moneda"  class="cambio_moneda1">
+              <!-- CAMBIO A DOLLAR  -->
+              <option id="slc_dollar"value="dollar" class="cambio_moneda">  dollar</option> 
+              <!-- CAMBIO A CLP -->
+              <option id="slc_clp" value="clp" class="cambio_moneda"> clp</option>
+            </select>
+          </form>
+        </div>
+      </nav>
+    </header>
 
+    <div class="col-12 mastergrid">
+      <!-- <div class="col-sm-12 col-lg-2 col-xl-3 col-md-2 categoria2">  acá van las categorías
+        <div class="div-categories"><a href="">Muebles</a></div>
+        <div class="div-categories"><a href="">Joyas</a></div>
+        <div class="div-categories"><a href="">Bolsos</a></div>
+        <div class="div-categories"><a href="">Talabartería</a></div> 
+      </div>
+    -->
+      <div style="padding-top: 300px;"class="container-fluid dimension col-sm-12 col-8">
+        <div class="row dimension">
+          <div class="col-sm-12">
+            <h2 class="page-header " style="padding-bottom:50px" >Productos destacados</h2>
+          </div>
+          <!-- AQUI INICIAN LOS PRODUCTOS -->
+          <!-- INICIO PRODUCTO -->
+          <div
+            id="producto1"
+            class="col-sm-12 col-md-6 col-lg-4 col-xl-3 min_product"
+          >
+            <div class="imagenes_producto">
+              <a id="imagen_producto1" href="./producto-principal.html"> </a>
+            </div>
+            <div class="text-center" class="name-product">
+              <a
+                class="nombre_producto text-decoration-none"
+                id="nombre_producto1"
+                href="./producto-principal.html"
+                >nombre del producto
+              </a>
+              <div id="precio_producto1" class="precio-producto text-center">
+                $90.000
+              </div>
+            </div>
+          </div>
+          <!-- FIN PRODUCTO -->
+          
+          <!-- INICIO PRODUCTO -->
+          <div
+            id="producto2"
+            class="col-sm-12 col-md-6 col-lg-4 col-xl-3 min_product"
+          >
+            <div class="imagenes_producto">
+              <a id="imagen_producto2" href="./producto-principal.html"> </a>
+            </div>
+            <div class="text-center" class="name-product">
+              <a
+                class="nombre_producto text-decoration-none"
+                id="nombre_producto2"
+                href="./producto-principal.html"
+                >nombre del producto
+              </a>
+              <div id="precio_producto2" class="precio-producto text-center">
+                $90.000
+              </div>
+            </div>
+          </div>
+          <!-- FIN PRODUCTO -->
+          <!-- INICIO PRODUCTO -->
+          <div
+            id="producto3"
+            class="col-sm-12 col-md-6 col-lg-4 col-xl-3 min_product"
+          >
+            <div class="imagenes_producto">
+              <a id="imagen_producto3" href="./producto-principal.html"> </a>
+            </div>
+            <div class="text-center" class="name-product">
+              <a
+                class="nombre_producto text-decoration-none"
+                id="nombre_producto3"
+                href="./producto-principal.html"
+                >nombre del producto
+              </a>
+              <div id="precio_producto3" class="precio-producto text-center">
+                $90.000
+              </div>
+            </div>
+          </div>
+          <!-- FIN PRODUCTO -->
+          <!-- INICIO PRODUCTO -->
+          <div
+            id="producto4"
+            class="col-sm-12 col-md-6 col-lg-4 col-xl-3 min_product"
+          >
+            <div class="imagenes_producto">
+              <a id="imagen_producto4" href="./producto-principal.html"> </a>
+            </div>
+            <div class="text-center" class="name-product">
+              <a
+                class="nombre_producto text-decoration-none"
+                id="nombre_producto4"
+                href="./producto-principal.html"
+                >nombre del producto
+              </a>
+              <div id="precio_producto4" class="precio-producto text-center">
+                $90.000
+              </div>
+            </div>
+          </div>
+          <!-- FIN PRODUCTO -->
+          <!-- INICIO PRODUCTO -->
+          <div
+            id="producto5"
+            class="col-sm-12 col-md-6 col-lg-4 col-xl-3 min_product"
+          >
+            <div class="imagenes_producto">
+              <a id="imagen_producto5" href="./producto-principal.html"> </a>
+            </div>
+            <div class="text-center" class="name-product">
+              <a
+                class="nombre_producto text-decoration-none"
+                id="nombre_producto5"
+                href="./producto-principal.html"
+                >nombre del producto
+              </a>
+              <div id="precio_producto5" class="precio-producto text-center">
+                $90.000
+              </div>
+            </div>
+          </div>
+          <!-- FIN PRODUCTO -->
+          <!-- INICIO PRODUCTO -->
+          <div
+            id="producto6"
+            class="col-sm-12 col-md-6 col-lg-4 col-xl-3 min_product"
+          >
+            <div class="imagenes_producto">
+              <a id="imagen_producto6" href="./producto-principal.html"> </a>
+            </div>
+            <div class="text-center" class="name-product">
+              <a
+                class="nombre_producto text-decoration-none"
+                id="nombre_producto6"
+                href="./producto-principal.html"
+                >nombre del producto
+              </a>
+              <div id="precio_producto6" class="precio-producto text-center">
+                $90.000
+              </div>
+            </div>
+          </div>
+          <!-- FIN PRODUCTO -->
+          <!-- INICIO PRODUCTO -->
+          <div
+            id="producto7"
+            class="col-sm-12 col-md-6 col-lg-4 col-xl-3 min_product"
+          >
+            <div class="imagenes_producto">
+              <a id="imagen_producto7" href="./producto-principal.html"> </a>
+            </div>
+            <div class="text-center" class="name-product">
+              <a
+                class="nombre_producto text-decoration-none"
+                id="nombre_producto7"
+                href="./producto-principal.html"
+                >nombre del producto
+              </a>
+              <div id="precio_producto7" class="precio-producto text-center">
+                $90.000
+              </div>
+            </div>
+          </div>
+          <!-- FIN PRODUCTO -->
+          <!-- INICIO PRODUCTO -->
+          <div
+            id="producto8"
+            class="col-sm-12 col-md-6 col-lg-4 col-xl-3 min_product"
+          >
+            <div class="imagenes_producto">
+              <a id="imagen_producto8" href="./producto-principal.html"> </a>
+            </div>
+            <div class="text-center" class="name-product">
+              <a
+                class="nombre_producto text-decoration-none"
+                id="nombre_producto8"
+                href="./producto-principal.html"
+                >nombre del producto
+              </a>
+              <div id="precio_producto8" class="precio-producto text-center">
+                $90.000
+              </div>
+            </div>
+          </div>
+          <!-- FIN PRODUCTO -->
+          <!-- ACA TERMINAN LOS PRODUCTOS -->
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-dark text-white">
+      <div class="container-fluid">
+        <nav class="row col-12">
+          <a
+            href="#"
+            class="
+              col-xl-2 col-lg-2 col-md-4 col-sm-6
+              text-reset text-uppercase
+              d-flex
+              align-items-center
+              justify-content-between
+              distancia-footer
+            "
+          >
+            <img
+              src="./icons/tienda-en-linea.png"
+              height="100px"
+              alt="Logo Mercado Artesano"
+              class="mr-3"
+            />
+            Mercado Artesanos
+          </a>
+          <ul class="col-xl-2 col-lg-2 col-md-4 col-sm-6 list-unstyled">
+            <li class="font-weight-bold text-uppercase">Recomendados</li>
+            <li><a href="" class="text-reset">link1</a></li>
+            <li><a href="" class="text-reset">link2</a></li>
+            <li><a href="" class="text-reset">link3</a></li>
+            <li><a href="" class="text-reset">link4</a></li>
+          </ul>
+          <ul class="col-xl-2 col-lg-2 col-md-4 col-sm-6 list-unstyled">
+            <li class="font-weight-bold text-uppercase">Enlaces rapidos</li>
+            <li><a href="" class="text-reset">Inicio</a></li>
+            <li><a href="" class="text-reset">Productos</a></li>
+            <li><a href="" class="text-reset">Contacto</a></li>
+            <li><a href="" class="text-reset">Acerca de nosotros</a></li>
+          </ul>
+          <ul class="col-xl-1 col-lg-1 col-md-4 col-sm-6 list-unstyled">
+            <li class="font-weight-bold text-uppercase">Redes Sociales</li>
+            <li class="d-flex justify-content-between">
+              <a href="https://www.facebook.com/scarlett.johnanson">
+                <img src="./icons/facebook.png" alt="Facebook" height="20px" />
+              </a>
+              <a href="https://www.instagram.com/alexandradaddario/?hl=es-la">
+                <img
+                  src="./icons/instagram.png"
+                  alt="instagram"
+                  height="20px"
+                />
+              </a>
+              <a href="https://twitter.com/muebleslufran">
+                <img src="./icons/gorjeo.png" alt="Twitter" height="20px" />
+              </a>
+              <a href="https://web.whatsapp.com">
+                <img src="./icons/whatsapp.png" alt="whatsapp" height="20px" />
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
 </html>
