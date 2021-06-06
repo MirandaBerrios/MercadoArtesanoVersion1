@@ -10,11 +10,18 @@
       rel="canonical"
       href="https://getbootstrap.com/docs/4.6/examples/checkout/"
     />
+    <link rel="stylesheet" href="./style/style_header.css"/>
     <link rel="stylesheet" href="./bootstrap/bootstrap-4.6.0-examples/assets/dist/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="./bootstrap/bootstrap-4.6.0-examples/checkout/form-validation.css">
 
     <link rel="stylesheet" href="./style/style4.css">
+
+    <link rel="stylesheet" href="./style/stylecontacto.css">
+
+    <link rel="stylesheet" href="./style/stylefooter.css">
+
+    <script src="./js/index.js"></script>
 
   </head>
 
@@ -71,16 +78,9 @@
     </header>
 
     <div class="container margenes-container">
-      <div class="py-5 text-center">
-        <img
-          class="d-block mx-auto mb-4"
-          src="/bootstrap/bootstrap-4.6.0-examples/assets/brand/bootstrap-outline.svg"
-          alt=""
-          width="72"
-          height="72"
-        />
+      <div class="py-5 text-center separacion">
         <h2>Contactenos</h2>
-        <p class="lead">Ingrese su informacion para contactar con nosotros</p>
+        <p class="lead">Ingrese su información para contactar con nosotros</p>
       </div>
 
       <div class="col-md-8 order-md-1 centrado">
@@ -97,7 +97,7 @@
                 value=""
                 required
               />
-              <div class="invalid-feedback">Valid first name is required.</div>
+              <div class="invalid-feedback">Se requiere un nombre verificado.</div>
             </div>
             <div class="col-md-6 mb-3">
               <label for="lastName">Apellidos</label>
@@ -117,7 +117,7 @@
 
           <div class="mb-3">
             <label for="email"
-              >Correo electronico
+              >Correo electrónico
               <span class="text-muted">(Opcional)</span></label
             >
             <input
@@ -147,7 +147,7 @@
 
           <hr class="mb-4" />
           <button class="btn btn-primary btn-lg btn-block" type="submit">
-            Enviar Mensaje
+            Enviar mensaje
           </button>
         </form>
       </div>
